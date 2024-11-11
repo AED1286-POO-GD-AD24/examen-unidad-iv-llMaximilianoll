@@ -20,10 +20,26 @@ public class Carrito<T extends Producto> {
     }
 
     public double calcularTotal() {
-        
+
+        double total = 0;
+
+        for (int i = 0; i < productos.length; i++) {
+
+            if (productos[i] != null)
+                total += productos[i].getPrecio();
+
+        }
+
+        return total;
     }
 
     public void mostrarProductos() {
-        
+
+        for (int i = 0; i < productos.length; i++) {
+
+            if (productos[i] != null)
+                productos[i].toString();
+
+        }
     }
 }
